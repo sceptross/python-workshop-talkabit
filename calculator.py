@@ -9,6 +9,10 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_Dialog(object):
+    #######################################################
+    ##            CODIGO ADICIONADO POR MIM              ##
+    #######################################################
+
     firstOperand = 0
     operation = 0
     mustClearText = False
@@ -51,7 +55,9 @@ class Ui_Dialog(object):
         else:
             self.firstOperand = int(self.textBrowser.toPlainText())
         self.mustClearText = True
-
+    #######################################################
+    ##          FIM DO CODIGO ADICIONADO POR MIM         ##
+    #######################################################
 
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -168,6 +174,10 @@ class Ui_Dialog(object):
         self.horizontalLayout.addLayout(self.verticalLayout)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
 
+        #######################################################
+        ##            CODIGO ADICIONADO POR MIM              ##
+        #######################################################
+
         self.pushButton_12.clicked.connect(lambda: self.insert_number(3))
         self.pushButton_16.clicked.connect(lambda: self.insert_number(2))
         self.pushButton_14.clicked.connect(lambda: self.insert_number(1))
@@ -187,6 +197,10 @@ class Ui_Dialog(object):
         self.pushButton_10.clicked.connect(self.calc)
 
         self.pushButton_9.clicked.connect(lambda: self.textBrowser.setText(''))
+
+        #######################################################
+        ##          FIM DO CODIGO ADICIONADO POR MIM         ##
+        #######################################################
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
